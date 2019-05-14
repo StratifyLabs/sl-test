@@ -1,0 +1,84 @@
+{
+   "creationDate": 1557841621,
+   "verbose": "0.29",
+   "interactive": "false",
+   "silent": "false",
+   "json": "false",
+   "version": "0.29",
+   "test": {
+      "clean": [
+         {
+            "case": "reinstall",
+            "command": "cloud.update:reinstall,os,app=false",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         }
+      ],
+      "run": [
+         {
+            "case": "helloWorld",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW app.run:path=/app/flash/HelloWorld",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "HelloWorld",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "helloWorldRam",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram app.run:path=/app/ram/HelloWorld",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "HelloWorld",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "blinky",
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl app.run:path=/app/flash/Blinky",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "Blinky",
+            "duration": "5",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "blinkyRam",
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram app.run:path=/app/ram/Blinky",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "Blinky",
+            "duration": "5",
+            "architecture": "arm",
+            "json": "true"
+         }
+      ]
+   }
+}

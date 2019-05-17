@@ -7,5 +7,6 @@ A collection of tests for sl
 sl test.run:name=task
 sl test.run:name=cloud
 sl test.run:name=application
+rm -Rf ./MyHelloWorld
 sl test.run:name=filesystem
 ```

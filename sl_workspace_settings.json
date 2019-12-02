@@ -4,8 +4,8 @@
    "interactive": "false",
    "silent": "false",
    "json": "false",
-   "version": "0.31",
-   "test": {
+   "version": "0.38",
+   "script": {
       "task": [
          {
             "case": "list0",
@@ -148,6 +148,64 @@
             "json": "true"
          }
       ],
+      "dhrystone": [
+         {
+            "case": "flash",
+            "command": "bench.test:id=QpXcn3w2P1YUcatvAZZd",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "ram",
+            "command": "bench.test:id=QpXcn3w2P1YUcatvAZZd,ram",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "ramExternal",
+            "command": "bench.test:id=QpXcn3w2P1YUcatvAZZd,ram,external",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "ramTightlyCoupled",
+            "command": "bench.test:id=QpXcn3w2P1YUcatvAZZd,ram,tightlycoupled",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         }
+      ],
       "debug": [
          {
             "case": "trace0",
@@ -155,53 +213,11 @@
             "clean": "",
             "arguments": "",
             "result": "true",
-            "terminal": "false",
+            "terminal": "true",
             "analyze": "false",
-            "debug": "false",
+            "debug": "true",
             "while": "",
-            "duration": "",
-            "architecture": "arm",
-            "json": "true"
-         },
-         {
-            "case": "trace1",
-            "command": "debug.trace:duration=1",
-            "clean": "",
-            "arguments": "",
-            "result": "true",
-            "terminal": "false",
-            "analyze": "false",
-            "debug": "false",
-            "while": "",
-            "duration": "",
-            "architecture": "arm",
-            "json": "true"
-         },
-         {
-            "case": "trace2",
-            "command": "debug.trace:duration=2",
-            "clean": "",
-            "arguments": "",
-            "result": "true",
-            "terminal": "false",
-            "analyze": "false",
-            "debug": "false",
-            "while": "",
-            "duration": "",
-            "architecture": "arm",
-            "json": "true"
-         },
-         {
-            "case": "trace3",
-            "command": "debug.trace:duration=3",
-            "clean": "",
-            "arguments": "",
-            "result": "true",
-            "terminal": "false",
-            "analyze": "false",
-            "debug": "false",
-            "while": "",
-            "duration": "",
+            "duration": "3",
             "architecture": "arm",
             "json": "true"
          }

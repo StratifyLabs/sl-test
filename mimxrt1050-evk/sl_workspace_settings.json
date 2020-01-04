@@ -1,0 +1,140 @@
+{
+   "creationDate": 1575835704,
+   "verbose": "0.38",
+   "interactive": "false",
+   "silent": "false",
+   "json": "false",
+   "version": "0.39",
+   "script": {
+      "connectTest": [
+         {
+            "case": "list",
+            "command": "fs.list:path=device@/",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true",
+            "count": 100
+         }
+      ],
+      "varySizeTest": [
+         {
+            "case": "install128k",
+            "command": "app.install:path=../../StratifyApps/VarySize,build=size128k",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true",
+            "count": 20
+         }
+      ],
+      "task": [
+         {
+            "case": "list",
+            "command": "task.list",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true",
+            "count": 200
+         }
+      ],
+      "temporaryFilesystem": [
+         {
+            "case": "copyToDevice",
+            "command": "fs.copy:source=host@sl_workspace_settings.json,dest=device@/tmp/settings.json",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true",
+            "count": 100
+         }
+      ],
+      "cloud": [
+         {
+            "case": "install",
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true",
+            "count": 3
+         },
+         {
+            "case": "run",
+            "command": "app.run:path=Blinky",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "3",
+            "architecture": "arm",
+            "json": "true",
+            "count": 1
+         },
+         {
+            "case": "reset",
+            "command": "os.reset",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "3",
+            "architecture": "arm",
+            "json": "true",
+            "count": 1
+         },
+         {
+            "case": "download",
+            "command": "cloud.download:id=8PtMwYjOghdeUpMxPmyl,arch=v7em_f5dh",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true",
+            "count": 3
+         }
+      ]
+   }
+}

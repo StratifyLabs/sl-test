@@ -4,7 +4,7 @@
    "interactive": "false",
    "silent": "false",
    "json": "false",
-   "version": "0.38",
+   "version": "0.50",
    "script": {
       "task": [
          {
@@ -378,10 +378,10 @@
             "json": "true"
          }
       ],
-      "application": [
+      "applicationFlashRam": [
          {
             "case": "run0",
-            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW app.run:path=device@/app/flash/HelloWorld",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW",
             "clean": "",
             "arguments": "",
             "result": "true",
@@ -562,7 +562,179 @@
             "json": "true"
          }
       ],
-      "filesystem": [
+      "applicationRam": [
+         {
+            "case": "run0",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "HelloWorld",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "run1",
+            "command": "application.run:path=HelloWorld",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "HelloWorld",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "run2",
+            "command": "application.run:path=device@/app/flash/HelloWorld",
+            "clean": "",
+            "arguments": "",
+            "result": "false",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "HelloWorld",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "run3",
+            "command": "application.run:path=device@/app/ram/HelloWorld",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "HelloWorld",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "run4",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram app.run:path=device@/app/ram/HelloWorld",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "HelloWorld",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "run5",
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram app.run:path=device@/app/ram/Blinky",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "true",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "Blinky",
+            "duration": "5",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "run6",
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram app.run:path=device@/app/flash/Blinky",
+            "clean": "app.clean",
+            "arguments": "",
+            "result": "false",
+            "terminal": "true",
+            "analyze": "false",
+            "debug": "false",
+            "while": "Blinky",
+            "duration": "5",
+            "architecture": "arm",
+            "json": "true"
+         }
+      ],
+      "applicationBuild": [
+         {
+            "case": "create0",
+            "command": "app.create:name=MyHelloWorld",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "build0",
+            "command": "app.build:path=MyHelloWorld",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "build1",
+            "command": "app.build:path=MyHelloWorld,clean",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "build2",
+            "command": "app.build:path=MyHelloWorld,clean=true",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "build3",
+            "command": "app.build:path=MyHelloWorld,clean=false",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         }
+      ],
+      "appFlashFilesystem": [
          {
             "case": "copyToDeviceFlash",
             "command": "fs.copy:source=host@sl_workspace_settings.json,destination=device@/app/flash/settings.json",
@@ -579,7 +751,7 @@
          },
          {
             "case": "copyFromDeviceFlash",
-            "command": "fs.copy:dest=host@settings.json,src=device@/app/flash/settings.json",
+            "command": "fs.copy:dest=host@settings.json,source=device@/app/flash/settings.json",
             "clean": "",
             "arguments": "",
             "result": "true",
@@ -646,7 +818,123 @@
             "duration": "",
             "architecture": "arm",
             "json": "true"
+         }
+      ],
+      "filesystemHome": [
+         {
+            "case": "list0",
+            "command": "fs.list:path=device@/home",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
          },
+         {
+            "case": "copy0",
+            "command": "filesystem.copy:source=host@sl_workspace_settings.json,dest=device@/home/settings.json",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "copy1",
+            "command": "filesystem.copy:dest=host@settings.json,source=device@/home/settings.json",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "copy1",
+            "command": "filesystem.copy:dest=host@settings.json,source=device@/home/settings.json,overwrite=false",
+            "clean": "",
+            "arguments": "",
+            "result": "false",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "list2",
+            "command": "fs.list:path=device@/home,recursive",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "list3",
+            "command": "fs.list:path=device@/home",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "list4",
+            "command": "fs.list:path=device@/",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "mkdir",
+            "command": "fs.mkdir:path=device@/app/directory",
+            "clean": "",
+            "arguments": "",
+            "result": "false",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         }
+      ],
+      "filesystemUtilities": [
          {
             "case": "list0",
             "command": "fs.list:path=device@/dev",
@@ -663,7 +951,7 @@
          },
          {
             "case": "list1",
-            "command": "filesystem.list:path=device@/",
+            "command": "fs.list:path=host@.",
             "clean": "",
             "arguments": "",
             "result": "true",
@@ -677,7 +965,49 @@
          },
          {
             "case": "list2",
+            "command": "filesystem.list:path=device@/",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "list3",
             "command": "fs.list:path=device@/app",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "list4",
+            "command": "fs.list:path=device@/,recursive",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true"
+         },
+         {
+            "case": "list5",
+            "command": "fs.list:path=host@.,recursive",
             "clean": "",
             "arguments": "",
             "result": "true",

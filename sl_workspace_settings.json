@@ -210,6 +210,61 @@
       ],
       "cloud": [
          {
+            "case": "ping0",
+            "command": "cloud.ping:id=8PtMwYjOghdeUpMxPmyl",
+            "while": "",
+            "clean": "",
+            "result": true,
+            "fatal": true,
+            "assert": true,
+            "count": 1,
+            "architecture": "arm"
+         },
+         {
+            "case": "ping1",
+            "command": "cloud.ping:id=8PtMwYjOghdpMxPmyl",
+            "result": false,
+            "while": "",
+            "clean": "",
+            "fatal": true,
+            "assert": true,
+            "count": 1,
+            "architecture": "arm"
+         },
+         {
+            "case": "ping2",
+            "command": "cloud.ping",
+            "result": false,
+            "while": "",
+            "clean": "",
+            "fatal": true,
+            "assert": true,
+            "count": 1,
+            "architecture": "arm"
+         },
+         {
+            "case": "ping3",
+            "command": "cloud.ping:id=",
+            "result": false,
+            "while": "",
+            "clean": "",
+            "fatal": true,
+            "assert": true,
+            "count": 1,
+            "architecture": "arm"
+         },
+         {
+            "case": "ping4",
+            "command": "cloud.ping:id=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json",
+            "result": false,
+            "while": "",
+            "clean": "",
+            "fatal": true,
+            "assert": true,
+            "count": 1,
+            "architecture": "arm"
+         },
+         {
             "case": "update0",
             "command": "cloud.update:reinstall,os=true,app=false",
             "while": "",
@@ -276,6 +331,19 @@
             "architecture": "arm"
          },
          {
+            "case": "install3",
+            "command": "cloud.install:url=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json app.run:path=HelloWorld",
+            "while": "HelloWorld",
+            "clean": "app.clean",
+            "result": true,
+            "fatal": true,
+            "assert": true,
+            "terminal": true,
+            "duration": 1,
+            "count": 1,
+            "architecture": "arm"
+         },
+         {
             "case": "update2",
             "command": "cloud.update",
             "while": "",
@@ -292,50 +360,6 @@
             "clean": "app.clean",
             "while": "",
             "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
-         },
-         {
-            "case": "ping0",
-            "command": "cloud.ping:id=8PtMwYjOghdeUpMxPmyl",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
-         },
-         {
-            "case": "ping1",
-            "command": "cloud.ping:id=8PtMwYjOghdpMxPmyl",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
-         },
-         {
-            "case": "ping2",
-            "command": "cloud.ping",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
-         },
-         {
-            "case": "ping3",
-            "command": "cloud.ping:id=",
-            "result": false,
-            "while": "",
-            "clean": "",
             "fatal": true,
             "assert": true,
             "count": 1,

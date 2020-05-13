@@ -20,13 +20,13 @@
             "duration": "",
             "architecture": "arm",
             "json": "true",
-            "count": 100
+            "count": 250
          }
       ],
       "varySizeTest": [
          {
             "case": "install128k",
-            "command": "app.install:path=../../StratifyApps/VarySize,build=size128k",
+            "command": "app.install:path=../../VarySize,build=size128k",
             "clean": "",
             "arguments": "",
             "result": "true",
@@ -37,7 +37,7 @@
             "duration": "",
             "architecture": "arm",
             "json": "true",
-            "count": 20
+            "count": 500
          }
       ],
       "task": [
@@ -54,7 +54,7 @@
             "duration": "",
             "architecture": "arm",
             "json": "true",
-            "count": 200
+            "count": 500
          }
       ],
       "temporaryFilesystem": [
@@ -133,7 +133,22 @@
             "duration": "",
             "architecture": "arm",
             "json": "true",
-            "count": 3
+            "count": 1
+         },
+         {
+            "case": "installDownloaded",
+            "command": "app.install:path=Blinky_release_v7em_f5dh",
+            "clean": "",
+            "arguments": "",
+            "result": "true",
+            "terminal": "false",
+            "analyze": "false",
+            "debug": "false",
+            "while": "",
+            "duration": "",
+            "architecture": "arm",
+            "json": "true",
+            "count": 200
          }
       ]
    }

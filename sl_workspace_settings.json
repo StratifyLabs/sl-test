@@ -9,422 +9,189 @@
       "task": [
          {
             "case": "list0",
-            "command": "task.list",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "task.list"
          },
          {
             "case": "list1",
-            "command": "task.list:pid=0",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "task.list:pid=0"
          },
          {
             "case": "list2",
-            "command": "task.list:id=0",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "task.list:id=0"
          },
          {
             "case": "list3",
-            "command": "task.list:name=sys",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "task.list:name=sys"
          },
          {
             "case": "list4",
-            "command": "task.list:name=HelloWorld",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "task.list:name=HelloWorld"
          },
          {
             "case": "list5",
-            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram app.run:path=Blinky task.list:name=Blinky",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram app.run:path=Blinky task.list:name=Blinky"
          },
          {
             "case": "listReference0",
             "reference": {
                "name": "task",
                "case": "list3"
-            },
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            }
          },
          {
             "case": "listReference1",
             "reference": {
                "name": "task",
                "case": "list100"
-            },
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            }
          },
          {
             "case": "analyze",
-            "command": "task.list",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "task.list"
          },
          {
             "case": "signal0",
             "command": "task.signal:name=Blinky,signal=STOP",
-            "duration": 2,
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 2
          },
          {
             "case": "signal1",
             "command": "task.signal:name=Blinky,signal=CONT",
-            "duration": 2,
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 2
          },
          {
             "case": "list6",
             "command": "task.list",
-            "clean": "os.reset",
-            "while": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "clean": "os.reset"
          }
       ],
       "dhrystone": [
          {
             "case": "flash",
             "command": "bench.test:id=QpXcn3w2P1YUcatvAZZd",
-            "clean": "app.clean",
-            "while": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "clean": "app.clean"
          },
          {
             "case": "ram",
             "command": "bench.test:id=QpXcn3w2P1YUcatvAZZd,ram",
-            "clean": "app.clean",
-            "while": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "clean": "app.clean"
          },
          {
             "case": "ramExternal",
             "command": "bench.test:id=QpXcn3w2P1YUcatvAZZd,ram,external",
-            "clean": "app.clean",
-            "while": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "clean": "app.clean"
          },
          {
             "case": "ramTightlyCoupled",
             "command": "bench.test:id=QpXcn3w2P1YUcatvAZZd,ram,tightlycoupled",
-            "clean": "app.clean",
-            "while": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "clean": "app.clean"
          }
       ],
       "debug": [
          {
             "case": "trace0",
             "command": "os.reset",
-            "duration": "3",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 3
          }
       ],
       "cloud": [
          {
             "case": "ping0",
-            "command": "cloud.ping:id=8PtMwYjOghdeUpMxPmyl",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.ping:id=8PtMwYjOghdeUpMxPmyl"
          },
          {
             "case": "ping1",
             "command": "cloud.ping:id=8PtMwYjOghdpMxPmyl",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "result": false
          },
          {
             "case": "ping2",
             "command": "cloud.ping",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "result": false
          },
          {
             "case": "ping3",
             "command": "cloud.ping:id=",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "result": false
          },
          {
             "case": "ping4",
             "command": "cloud.ping:id=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "result": false
          },
          {
             "case": "update0",
-            "command": "cloud.update:reinstall,os=true,app=false",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.update:reinstall,os=true,app=false"
          },
          {
             "case": "update1",
-            "command": "cloud.update",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.update"
          },
          {
             "case": "install0",
-            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW"
          },
          {
             "case": "install1",
-            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram"
          },
          {
             "case": "install2",
-            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl"
          },
          {
             "case": "install2",
-            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram"
          },
          {
             "case": "install3",
             "command": "cloud.install:url=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json app.run:path=HelloWorld",
             "while": "HelloWorld",
             "clean": "app.clean",
-            "result": true,
-            "fatal": true,
-            "assert": true,
             "terminal": true,
-            "duration": 1,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 1
          },
          {
             "case": "update2",
-            "command": "cloud.update",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.update"
          },
          {
             "case": "update3",
             "command": "cloud.update:reinstall,os=false,app=true",
-            "clean": "app.clean",
-            "while": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "clean": "app.clean"
          }
       ],
       "applicationFlashRam": [
          {
             "case": "run0",
             "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW",
-            "while": "HelloWorld",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run1",
             "command": "application.run:path=HelloWorld",
             "terminal": true,
-            "while": "HelloWorld",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run2",
             "command": "application.run:path=device@/app/flash/HelloWorld",
             "terminal": true,
-            "while": "HelloWorld",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run3",
             "command": "application.run:path=device@/app/ram/HelloWorld",
             "result": false,
             "terminal": true,
-            "while": "HelloWorld",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run4",
             "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram app.run:path=device@/app/ram/HelloWorld",
             "clean": "app.clean",
             "terminal": true,
-            "while": "HelloWorld",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run5",
@@ -432,12 +199,7 @@
             "clean": "app.clean",
             "terminal": true,
             "while": "Blinky",
-            "duration": "3",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 3
          },
          {
             "case": "run6",
@@ -445,89 +207,35 @@
             "clean": "app.clean",
             "terminal": true,
             "while": "Blinky",
-            "duration": "3",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 3
          },
          {
             "case": "create0",
-            "command": "app.create:name=MyHelloWorld",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.create:name=MyHelloWorld"
          },
          {
             "case": "build0",
-            "command": "app.build:path=MyHelloWorld",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.build:path=MyHelloWorld"
          },
          {
             "case": "build1",
-            "command": "app.build:path=MyHelloWorld,clean",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.build:path=MyHelloWorld,clean"
          },
          {
             "case": "build2",
-            "command": "app.build:path=MyHelloWorld,clean=true",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.build:path=MyHelloWorld,clean=true"
          },
          {
             "case": "build3",
-            "command": "app.build:path=MyHelloWorld,clean=false",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.build:path=MyHelloWorld,clean=false"
          },
          {
             "case": "clean",
-            "command": "os.reset app.clean",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "os.reset app.clean"
          },
          {
             "case": "clean2",
-            "command": "fs.remove:path=host@MyHelloWorld,r",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.remove:path=host@MyHelloWorld,r"
          }
       ],
       "applicationRam": [
@@ -535,61 +243,33 @@
             "case": "run0",
             "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram",
             "terminal": true,
-            "while": "HelloWorld",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run1",
             "command": "application.run:path=HelloWorld",
             "terminal": true,
-            "while": "HelloWorld",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run2",
             "command": "application.run:path=device@/app/flash/HelloWorld",
             "result": false,
             "terminal": true,
-            "while": "HelloWorld",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run3",
             "command": "application.run:path=device@/app/ram/HelloWorld",
             "terminal": true,
-            "while": "HelloWorld",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run4",
             "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram app.run:path=device@/app/ram/HelloWorld",
             "clean": "app.clean",
             "terminal": true,
-            "while": "HelloWorld",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "while": "HelloWorld"
          },
          {
             "case": "run5",
@@ -597,12 +277,7 @@
             "clean": "app.clean",
             "terminal": true,
             "while": "Blinky",
-            "duration": "5",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 5
          },
          {
             "case": "fail1",
@@ -611,11 +286,7 @@
             "result": false,
             "terminal": true,
             "while": "Blinky",
-            "duration": "5",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 5
          },
          {
             "case": "fail2",
@@ -624,11 +295,7 @@
             "result": false,
             "terminal": true,
             "while": "Blinky",
-            "duration": "5",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 5
          },
          {
             "case": "fail3",
@@ -637,11 +304,7 @@
             "result": false,
             "terminal": true,
             "while": "Blinky",
-            "duration": "5",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 5
          },
          {
             "case": "fail4",
@@ -650,316 +313,146 @@
             "result": false,
             "terminal": true,
             "while": "Blinky",
-            "duration": "5",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "duration": 5
          }
       ],
       "applicationBuild": [
          {
             "case": "create0",
-            "command": "app.create:name=MyHelloWorld",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.create:name=MyHelloWorld"
          },
          {
             "case": "build0",
-            "command": "app.build:path=MyHelloWorld",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.build:path=MyHelloWorld"
          },
          {
             "case": "build1",
-            "command": "app.build:path=MyHelloWorld,clean",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.build:path=MyHelloWorld,clean"
          },
          {
             "case": "build2",
-            "command": "app.build:path=MyHelloWorld,clean=true",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.build:path=MyHelloWorld,clean=true"
          },
          {
             "case": "build3",
-            "command": "app.build:path=MyHelloWorld,clean=false",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "app.build:path=MyHelloWorld,clean=false"
          },
          {
             "case": "clean",
-            "command": "fs.remove:path=host@MyHelloWorld,r",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.remove:path=host@MyHelloWorld,r"
          }
       ],
       "appFlashFilesystem": [
          {
             "case": "copyToDeviceFlash",
-            "command": "fs.copy:source=host@sl_workspace_settings.json,destination=device@/app/flash/settings.json",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.copy:source=host@sl_workspace_settings.json,destination=device@/app/flash/settings.json"
          },
          {
             "case": "copyFromDeviceFlash",
-            "command": "fs.copy:dest=host@settings.json,source=device@/app/flash/settings.json",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.copy:dest=host@settings.json,source=device@/app/flash/settings.json"
          },
          {
             "case": "removeFromDeviceFlash",
-            "command": "fs.remove:path=device@/app/flash/settings.json",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.remove:path=device@/app/flash/settings.json"
          },
          {
             "case": "installHelloWorldFlash",
-            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW"
          },
          {
             "case": "removeHelloWorldFlash",
-            "command": "filesystem.remove:path=device@/app/flash/HelloWorld",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "filesystem.remove:path=device@/app/flash/HelloWorld"
          },
          {
             "case": "removeHelloWorldFlashonClean",
             "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW",
-            "clean": "filesystem.remove:path=device@/app/flash/HelloWorld",
-            "while": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "clean": "filesystem.remove:path=device@/app/flash/HelloWorld"
          }
       ],
       "filesystemHome": [
          {
             "case": "list0",
             "command": "fs.list:path=device@/home",
-            "fatal": false,
-            "assert": true,
-            "while": "",
-            "clean": "",
-            "result": true,
-            "count": 1,
-            "architecture": "arm"
+            "fatal": false
          },
          {
             "case": "copy0",
-            "command": "filesystem.copy:source=host@sl_workspace_settings.json,dest=device@/home/settings.json",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "filesystem.copy:source=host@sl_workspace_settings.json,dest=device@/home/settings.json"
          },
          {
             "case": "copy1",
-            "command": "filesystem.copy:dest=host@settings.json,source=device@/home/settings.json",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "filesystem.copy:dest=host@settings.json,source=device@/home/settings.json"
          },
          {
             "case": "copy1",
             "command": "filesystem.copy:dest=host@settings.json,source=device@/home/settings.json,overwrite=false",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "result": false
          },
          {
             "case": "list2",
-            "command": "fs.list:path=device@/home,recursive",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.list:path=device@/home,recursive"
          },
          {
             "case": "list3",
-            "command": "fs.list:path=device@/home",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.list:path=device@/home"
          },
          {
             "case": "list4",
-            "command": "fs.list:path=device@/",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.list:path=device@/"
          },
          {
             "case": "mkdir",
             "command": "fs.mkdir:path=device@/app/directory",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "result": false
          }
       ],
       "filesystemUtilities": [
          {
             "case": "list0",
-            "command": "fs.list:path=device@/dev",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.list:path=device@/dev"
          },
          {
             "case": "list1",
-            "command": "fs.list:path=host@.",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.list:path=host@."
          },
          {
             "case": "list2",
-            "command": "filesystem.list:path=device@/",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "filesystem.list:path=device@/"
          },
          {
             "case": "list3",
-            "command": "fs.list:path=device@/app",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.list:path=device@/app"
          },
          {
             "case": "list4",
-            "command": "fs.list:path=device@/,recursive",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.list:path=device@/,recursive"
          },
          {
             "case": "list5",
-            "command": "fs.list:path=host@.,recursive",
-            "while": "",
-            "clean": "",
-            "result": true,
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "command": "fs.list:path=host@.,recursive"
          },
          {
             "case": "mkdir",
             "command": "fs.mkdir:path=device@/app/directory",
-            "result": false,
-            "while": "",
-            "clean": "",
-            "fatal": true,
-            "assert": true,
-            "count": 1,
-            "architecture": "arm"
+            "result": false
+         },
+         {
+            "case": "mkdir0",
+            "command": "fs.mkdir:path=host@tmp"
+         },
+         {
+            "case": "remove",
+            "command": "fs.remove:path=host@tmp,r"
+         },
+         {
+            "case": "remove1",
+            "command": "fs.remove:path=host@tmp1",
+            "result": false
+         },
+         {
+            "case": "remove2",
+            "command": "fs.remove:path=device@/dev",
+            "result": false
          }
       ]
    },

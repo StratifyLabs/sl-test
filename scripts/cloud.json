@@ -1,0 +1,92 @@
+{
+    "cloud": [
+        {
+            "case": "ping0",
+            "command": "cloud.ping:id=8PtMwYjOghdeUpMxPmyl"
+        },
+        {
+            "case": "ping1",
+            "command": "cloud.ping:id=8PtMwYjOghdpMxPmyl",
+            "result": false
+        },
+        {
+            "case": "ping2",
+            "command": "cloud.ping",
+            "result": false
+        },
+        {
+            "case": "ping3",
+            "command": "cloud.ping:id=",
+            "result": false
+        },
+        {
+            "case": "ping4",
+            "command": "cloud.ping:id=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json",
+            "result": false
+        },
+        {
+            "case": "update0",
+            "command": "cloud.update:reinstall,os=true,app=false"
+        },
+        {
+            "case": "update1",
+            "command": "cloud.update"
+        },
+        {
+            "case": "install0",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW"
+        },
+        {
+            "case": "install1",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW,ram"
+        },
+        {
+            "case": "install2",
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl"
+        },
+        {
+            "case": "install2",
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram"
+        },
+        {
+            "case": "download0",
+            "command": "cloud.download:id=8PtMwYjOghdeUpMxPmyl,arch=v7em_f4sh"
+        },
+        {
+            "case": "checkDownload0",
+            "command": "fs.exists:path=host@Blinky_release_v7em_f4sh",
+            "clean": "fs.remove:path=host@Blinky_release_v7em_f4sh"
+        },
+        {
+            "case": "download1",
+            "command": "cloud.download:id=8PtMwYjOdeUpMxPmyl",
+            "result": false
+        },
+        {
+            "case": "install3",
+            "command": "cloud.install:url=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json app.run:path=HelloWorld",
+            "while": "HelloWorld",
+            "clean": "app.clean",
+            "terminal": true,
+            "duration": 1
+        },
+        {
+            "case": "download2",
+            "command": "fs.download:url=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json,dest=host@HelloWorld.json"
+        },
+        {
+            "case": "checkDownload2",
+            "command": "fs.exists:path=host@HelloWorld.json",
+            "clean": "fs.remove:path=host@HelloWorld.json"
+        },
+        {
+            "case": "update2",
+            "command": "cloud.update"
+        },
+        {
+            "case": "update3",
+            "command": "cloud.update:reinstall,os=false,app=true",
+            "clean": "app.clean"
+        }
+    ]
+}

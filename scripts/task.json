@@ -1,0 +1,61 @@
+{
+    "task": [
+        {
+            "case": "list0",
+            "command": "task.list"
+        },
+        {
+            "case": "list1",
+            "command": "task.list:pid=0"
+        },
+        {
+            "case": "list2",
+            "command": "task.list:id=0"
+        },
+        {
+            "case": "list3",
+            "command": "task.list:name=sys"
+        },
+        {
+            "case": "list4",
+            "command": "task.list:name=HelloWorld"
+        },
+        {
+            "case": "list5",
+            "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram app.run:path=Blinky task.list:name=Blinky"
+        },
+        {
+            "case": "listReference0",
+            "reference": {
+                "name": "task",
+                "case": "list3"
+            }
+        },
+        {
+            "case": "listReference1",
+            "reference": {
+                "name": "task",
+                "case": "list100"
+            }
+        },
+        {
+            "case": "analyze",
+            "command": "task.list"
+        },
+        {
+            "case": "signal0",
+            "command": "task.signal:name=Blinky,signal=STOP",
+            "duration": 2
+        },
+        {
+            "case": "signal1",
+            "command": "task.signal:name=Blinky,signal=CONT",
+            "duration": 2
+        },
+        {
+            "case": "list6",
+            "command": "task.list",
+            "clean": "os.reset"
+        }
+    ]
+}

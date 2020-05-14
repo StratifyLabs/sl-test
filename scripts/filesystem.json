@@ -1,0 +1,120 @@
+{
+    "appFlashFilesystem": [
+        {
+            "case": "copyToDeviceFlash",
+            "command": "fs.copy:source=host@sl_workspace_settings.json,destination=device@/app/flash/settings.json"
+        },
+        {
+            "case": "copyFromDeviceFlash",
+            "command": "fs.copy:dest=host@settings.json,source=device@/app/flash/settings.json"
+        },
+        {
+            "case": "removeFromDeviceFlash",
+            "command": "fs.remove:path=device@/app/flash/settings.json"
+        },
+        {
+            "case": "installHelloWorldFlash",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW"
+        },
+        {
+            "case": "removeHelloWorldFlash",
+            "command": "filesystem.remove:path=device@/app/flash/HelloWorld"
+        },
+        {
+            "case": "removeHelloWorldFlashonClean",
+            "command": "cloud.install:id=Kvp7xXzdO94kyCWAAcmW",
+            "clean": "filesystem.remove:path=device@/app/flash/HelloWorld"
+        }
+    ],
+    "filesystemHome": [
+        {
+            "case": "list0",
+            "command": "fs.list:path=device@/home",
+            "fatal": false
+        },
+        {
+            "case": "copy0",
+            "command": "filesystem.copy:source=host@sl_workspace_settings.json,dest=device@/home/settings.json"
+        },
+        {
+            "case": "copy1",
+            "command": "filesystem.copy:dest=host@settings.json,source=device@/home/settings.json"
+        },
+        {
+            "case": "copy2",
+            "command": "filesystem.copy:dest=host@settings.json,source=device@/home/settings.json,overwrite=false",
+            "result": false
+        },
+        {
+            "case": "cleanCopy",
+            "command": "filesystem.remove:path=host@settings.json",
+            "result": false
+        },
+        {
+            "case": "list2",
+            "command": "fs.list:path=device@/home,recursive"
+        },
+        {
+            "case": "list3",
+            "command": "fs.list:path=device@/home"
+        },
+        {
+            "case": "list4",
+            "command": "fs.list:path=device@/"
+        },
+        {
+            "case": "mkdir",
+            "command": "fs.mkdir:path=device@/app/directory",
+            "result": false
+        }
+    ],
+    "filesystemUtilities": [
+        {
+            "case": "list0",
+            "command": "fs.list:path=device@/dev"
+        },
+        {
+            "case": "list1",
+            "command": "fs.list:path=host@."
+        },
+        {
+            "case": "list2",
+            "command": "filesystem.list:path=device@/"
+        },
+        {
+            "case": "list3",
+            "command": "fs.list:path=device@/app"
+        },
+        {
+            "case": "list4",
+            "command": "fs.list:path=device@/,recursive"
+        },
+        {
+            "case": "list5",
+            "command": "fs.list:path=host@.,recursive"
+        },
+        {
+            "case": "mkdir",
+            "command": "fs.mkdir:path=device@/app/directory",
+            "result": false
+        },
+        {
+            "case": "mkdir0",
+            "command": "fs.mkdir:path=host@tmp"
+        },
+        {
+            "case": "remove",
+            "command": "fs.remove:path=host@tmp,r"
+        },
+        {
+            "case": "remove1",
+            "command": "fs.remove:path=host@tmp1",
+            "result": false
+        },
+        {
+            "case": "remove2",
+            "command": "fs.remove:path=device@/dev",
+            "result": false
+        }
+    ]
+}

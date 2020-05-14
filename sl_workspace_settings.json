@@ -277,7 +277,7 @@
             "clean": "app.clean",
             "terminal": true,
             "while": "Blinky",
-            "duration": 5
+            "duration": 3
          },
          {
             "case": "fail1",
@@ -338,8 +338,105 @@
             "command": "app.build:path=MyHelloWorld,clean=false"
          },
          {
+            "case": "install0",
+            "command": "app.install:path=MyHelloWorld"
+         },
+         {
+            "case": "check0",
+            "command": "fs.exists:path=device@/app/flash/MyHelloWorld",
+            "clean": "app.clean"
+         },
+         {
+            "case": "install1",
+            "command": "app.install:path=MyHelloWorld,kill=false"
+         },
+         {
+            "case": "install2",
+            "command": "app.install:path=MyHelloWorld,kill=true"
+         },
+         {
+            "case": "install3",
+            "command": "app.install:path=MyHelloWorld,suffix=1"
+         },
+         {
+            "case": "check3",
+            "command": "fs.exists:path=device@/app/flash/MyHelloWorld1",
+            "clean": "app.clean"
+         },
+         {
+            "case": "install4",
+            "command": "app.install:path=MyHelloWorld,startup"
+         },
+         {
+            "case": "install5",
+            "command": "app.install:path=MyHelloWorld,startup=false"
+         },
+         {
+            "case": "install6",
+            "command": "app.install:path=MyHelloWorld,startup=true"
+         },
+         {
+            "case": "install7",
+            "command": "app.install:path=MyHelloWorld,ram=false"
+         },
+         {
+            "case": "install8",
+            "command": "app.install:path=MyHelloWorld,ram"
+         },
+         {
+            "case": "check0",
+            "command": "fs.exists:path=device@/app/ram/MyHelloWorld",
+            "clean": "app.clean"
+         },
+         {
+            "case": "install9",
+            "command": "app.install:path=MyHelloWorld,ram=true"
+         },
+         {
+            "case": "install10",
+            "command": "app.install:path=MyHelloWorld,data=10240"
+         },
+         {
+            "case": "install11",
+            "command": "app.install:path=MyHelloWorld,data=8192"
+         },
+         {
+            "case": "install12",
+            "command": "app.install:path=MyHelloWorld,data=4096"
+         },
+         {
+            "case": "install13",
+            "command": "app.install:path=MyHelloWorld,data=8192,ram"
+         },
+         {
+            "case": "install14",
+            "command": "app.install:path=MyHelloWorld,ram=true"
+         },
+         {
+            "case": "install15",
+            "command": "app.install:path=MyHelloWorld,auth=true"
+         },
+         {
+            "case": "install16",
+            "command": "app.install:path=MyHelloWorld,auth=false"
+         },
+         {
+            "case": "install17",
+            "command": "app.install:path=MyHelloWorld,auth"
+         },
+         {
+            "case": "install18",
+            "command": "app.install:path=MyHelloWorld,suffix=A,ram"
+         },
+         {
+            "case": "check18",
+            "command": "fs.exists:path=device@/app/ram/MyHelloWorldA",
+            "clean": "app.clean"
+         },
+         {
             "case": "clean",
-            "command": "fs.remove:path=host@MyHelloWorld,r"
+            "command": "fs.remove:path=host@MyHelloWorld,r",
+            "clean": "app.clean"
          }
       ],
       "appFlashFilesystem": [

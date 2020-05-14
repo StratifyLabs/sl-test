@@ -144,12 +144,35 @@
             "command": "cloud.install:id=8PtMwYjOghdeUpMxPmyl,ram"
          },
          {
+            "case": "download0",
+            "command": "cloud.download:id=8PtMwYjOghdeUpMxPmyl,arch=v7em_f4sh"
+         },
+         {
+            "case": "checkDownload0",
+            "command": "fs.exists:path=host@Blinky_release_v7em_f4sh",
+            "clean": "fs.remove:path=host@Blinky_release_v7em_f4sh"
+         },
+         {
+            "case": "download1",
+            "command": "cloud.download:id=8PtMwYjOdeUpMxPmyl",
+            "result": false
+         },
+         {
             "case": "install3",
             "command": "cloud.install:url=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json app.run:path=HelloWorld",
             "while": "HelloWorld",
             "clean": "app.clean",
             "terminal": true,
             "duration": 1
+         },
+         {
+            "case": "download2",
+            "command": "fs.download:url=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json,dest=host@HelloWorld.json"
+         },
+         {
+            "case": "checkDownload2",
+            "command": "fs.exists:path=host@HelloWorld.json",
+            "clean": "fs.remove:path=host@HelloWorld.json"
          },
          {
             "case": "update2",

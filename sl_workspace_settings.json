@@ -4,28 +4,28 @@
    "interactive": "false",
    "silent": "false",
    "json": "false",
-   "version": "0.52",
+   "version": "0.50",
    "script": {
       "script": [
          {
             "case": "cloud",
-            "command": "script.run:path=cloud.json"
+            "command": "script.run:path=scripts/cloud.json"
          },
          {
             "case": "application",
-            "command": "script.run:path=application.json"
+            "command": "script.run:path=scripts/application.json"
          },
          {
             "case": "task",
-            "command": "script.run:path=task.json"
+            "command": "script.run:path=scripts/task.json"
          },
          {
             "case": "task",
-            "command": "script.run:path=task.json"
+            "command": "script.run:path=scripts/task.json"
          },
          {
             "case": "task",
-            "command": "script.run:path=task.json"
+            "command": "script.run:path=scripts/task.json"
          }
       ],
       "dhrystone": [
@@ -58,5 +58,6 @@
          }
       ]
    },
-   "sdkDirectory": "StratifySDK"
+   "sdkDirectory": "StratifySDK",
+   "skipUpdate": "0.50"
 }

@@ -77,15 +77,6 @@
             "clean": "app.clean",
             "terminal": true,
             "duration": 1
-        },
-        {
-            "case": "download2",
-            "command": "fs.download:url=https://github.com/StratifyLabs/HelloWorld/releases/download/v1.10/HelloWorld.json,dest=host@HelloWorld.json"
-        },
-        {
-            "case": "checkDownload2",
-            "command": "fs.exists:path=host@HelloWorld.json",
-            "clean": "fs.remove:path=host@HelloWorld.json"
         }
     ]
 }

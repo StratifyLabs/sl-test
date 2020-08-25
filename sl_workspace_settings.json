@@ -18,14 +18,6 @@
          {
             "case": "task",
             "command": "script.run:path=scripts/task.json"
-         },
-         {
-            "case": "task",
-            "command": "script.run:path=scripts/task.json"
-         },
-         {
-            "case": "task",
-            "command": "script.run:path=scripts/task.json"
          }
       ],
       "dhrystone": [

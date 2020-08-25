@@ -26,7 +26,7 @@
         },
         {
             "case": "update0",
-            "command": "cloud.install:id=FFxXbp1ExySM7DaLrBA4,version=0.11"
+            "command": "cloud.install:id=FFxXbp1ExySM7DaLrBA4,version=0.13"
         },
         {
             "case": "update1",
